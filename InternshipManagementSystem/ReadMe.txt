@@ -6,7 +6,7 @@ Installation Steps (Your PC should have installed Node in your computer)
 
 1. First Clean your npm chache folder in your PC.
 (
---- You can find theat folder in AppData/Roming/npm-Chache
+--- You can find theat folder in AppData/Roming/npm-Cache
 --- Or run windows CMD in Administrator mode and
     "npm cache clean --force" will clean it. 
     for no error installaion you have to clean this chache folder. 
