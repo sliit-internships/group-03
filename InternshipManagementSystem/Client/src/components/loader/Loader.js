@@ -8,7 +8,7 @@ import "./loader.css";
  */
 const Loader = () => {
     return (
-        <div className="preloader">
+        <div className="preloader1">
             <div className="status">
                 <Spinner color={"secondary"} />
             </div>
