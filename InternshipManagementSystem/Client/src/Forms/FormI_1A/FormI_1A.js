@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import "./formI_1A.css"
+import {FaStar} from "react-icons/fa";
+
 
 class FormI1A extends Component {
     render() {
@@ -9,7 +11,7 @@ class FormI1A extends Component {
                     <h3 className="text-secondary text-center">Form I-1A : To be filled by the student</h3><br/>
                     <form className="formAbc">
                         {/*SLIIT Student Identification Number*/}
-                        <label>SLIIT Student Identification Number</label>
+                        <label>SLIIT Student Identification Number<FaStar fontSize="0.5em" color="red"/></label>
                         <input
                             id="ssin"
                             name="ssin"
