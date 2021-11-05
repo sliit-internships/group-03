@@ -27,7 +27,7 @@ import Person from "@material-ui/icons/Person";
 // core components/views for Admin layout
 import DashboardPage from "./components/views/Dashboard/Dashboard";
 import UserProfile from "./components/views/UserProfile/UserProfile.js";
-//import TableList from "./components/views/TableList/TableList.js";
+import TableList from "./components/views/TableList/TableList.js";
 //import Typography from "./components/views/Typography/Typography.js";
 //import Icons from "./components/views/Icons/Icons.js";
 //import Maps from "./components/views/Maps/Maps.js";
@@ -52,7 +52,6 @@ const dashboardRoutes = [
     layout: "/admin",
   },
 
-/*
   {
     path: "/table",
     name: "Table List",
@@ -60,7 +59,7 @@ const dashboardRoutes = [
     component: TableList,
     layout: "/admin",
   },
-*/
+
 /*
   {
     path: "/typography",
