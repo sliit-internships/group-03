@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import "formI_1A.css"
+import "./formI_1A.css"
 
 class FormI1A extends Component {
     render() {
         return (
             <div id="main-FormI1A-container">
                 <div id="ia">
-                    <h3 className="text-secondary text-center">FormI-1A</h3><br/>
+                    <h3 className="text-secondary text-center">Form I-1A : To be filled by the student</h3><br/>
                     <form className="formAbc">
                         {/*SLIIT Student Identification Number*/}
                         <label>SLIIT Student Identification Number</label>
@@ -114,7 +114,7 @@ class FormI1A extends Component {
                             required
                         />
                         <br/>
-                        <input type="button" value="Submit"/>
+                        <input type="button" value="Submit" className="btn-primary"/>
                     </form>
                 </div>
             </div>
