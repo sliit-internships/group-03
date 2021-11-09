@@ -18,6 +18,7 @@
 // @material-ui/icons
 import Dashboard from "@material-ui/icons/Dashboard";
 import Person from "@material-ui/icons/Person";
+import DescriptionIcon from '@mui/icons-material/Description';
 //import LibraryBooks from "@material-ui/icons/LibraryBooks";
 //import BubbleChart from "@material-ui/icons/BubbleChart";
 //import LocationOn from "@material-ui/icons/LocationOn";
@@ -28,6 +29,7 @@ import Person from "@material-ui/icons/Person";
 import DashboardPage from "./components/views/Dashboard/Dashboard";
 import UserProfile from "./components/views/UserProfile/UserProfile.js";
 import TableList from "./components/views/TableList/TableList.js";
+import FormPanel from './components/views/FormPanel/FormPanel';
 //import Typography from "./components/views/Typography/Typography.js";
 //import Icons from "./components/views/Icons/Icons.js";
 //import Maps from "./components/views/Maps/Maps.js";
@@ -60,6 +62,13 @@ const dashboardRoutes = [
     layout: "/admin",
   },
 
+  {
+    path: "/forms",
+    name: "Forms",
+    icon: DescriptionIcon,
+    component: FormPanel,
+    layout: "/admin",
+  },
 /*
   {
     path: "/typography",

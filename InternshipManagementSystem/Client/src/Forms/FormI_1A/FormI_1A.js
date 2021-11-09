@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import "./formI_1A.css"
-import {FaStar} from "react-icons/fa";
 
 
 class FormI1A extends Component {
@@ -11,7 +10,7 @@ class FormI1A extends Component {
                     <h3 className="text-secondary text-center">Form I-1A : To be filled by the student</h3><br/>
                     <form className="formAbc">
                         {/*SLIIT Student Identification Number*/}
-                        <label>SLIIT Student Identification Number<FaStar fontSize="0.5em" color="red"/></label>
+                        <label>1. SLIIT Student Identification Number<span style={{ color: "red", fontSize:"1.1rem"}}>*</span></label>
                         <input
                             id="ssin"
                             name="ssin"
@@ -21,7 +20,7 @@ class FormI1A extends Component {
                         />
                         <br/>
                         {/*Current Year of Registration at SLIIT*/}
-                        <label>Current Year of Registration at SLIIT</label>
+                        <label>2. Current Year of Registration at SLIIT<span style={{ color: "red", fontSize:"1.1rem"}}>*</span></label>
                         <input
                             id="cyr"
                             name="cyr"
@@ -31,7 +30,7 @@ class FormI1A extends Component {
                         />
                         <br/>
                         {/*Which calendar year have you completed or planning to complete your second year?*/}
-                        <label>Which calendar year have you completed or planning to complete your second year?</label>
+                        <label>3. Which calendar year have you completed or planning to complete your second year?<span style={{ color: "red", fontSize:"1.1rem"}}>*</span></label>
                         <input
                             id="yc"
                             name="yc"
@@ -41,7 +40,7 @@ class FormI1A extends Component {
                         />
                         <br/>
                         {/*Which period of the year are you planning to complete or completed your second year?*/}
-                        <label>Which period of the year are you planning to complete or completed your second year?</label>
+                        <label>4. Which period of the year are you planning to complete or completed your second year?<span style={{ color: "red", fontSize:"1.1rem"}}>*</span></label>
                         <input
                             id="w"
                             name="w"
@@ -51,7 +50,7 @@ class FormI1A extends Component {
                         />
                         <br/>
                         {/*Specialization*/}
-                        <label>Specialization</label>
+                        <label>5. Specialization<span style={{ color: "red", fontSize:"1.1rem"}}>*</span></label>
                         <input
                             id="s"
                             name="s"
@@ -59,8 +58,9 @@ class FormI1A extends Component {
                             placeholder="Select Your Answer"
                             required
                         />
+                        <br/>
                         {/*Student Name with Initials*/}
-                        <label>Student Name with Initials</label>
+                        <label>6. Student Name with Initials<span style={{ color: "red", fontSize:"1.1rem"}}>*</span></label>
                         <input
                             id="name"
                             name="name"
@@ -70,7 +70,7 @@ class FormI1A extends Component {
                         />
                         <br/>
                         {/*Student Mobile Phone Number*/}
-                        <label>Student Mobile Phone Number</label>
+                        <label>7. Student Mobile Phone Number<span style={{ color: "red", fontSize:"1.1rem"}}>*</span></label>
                         <input
                             id="phone"
                             name="phone"
@@ -79,7 +79,7 @@ class FormI1A extends Component {
                         />
                         <br/>
                         {/*Student Home Phone Number*/}
-                        <label>Student Home Phone Number</label>
+                        <label>8. Student Home Phone Number<span style={{ color: "red", fontSize:"1.1rem"}}>*</span></label>
                         <input
                             id="h_phone"
                             name="h_phone"
@@ -88,7 +88,7 @@ class FormI1A extends Component {
                         />
                         <br/>
                         {/*Student E-Mail (Enter One Primary E-mail Address that you use)*/}
-                        <label>Student E-Mail (Enter One Primary E-mail Address that you use)</label>
+                        <label>9. Student E-Mail (Enter One Primary E-mail Address that you use)<span style={{ color: "red", fontSize:"1.1rem"}}>*</span></label>
                         <input
                             id="mail"
                             name="mail"
@@ -98,7 +98,7 @@ class FormI1A extends Component {
                         />
                         <br/>
                         {/*What is the date you started or plan to start your internship?*/}
-                        <label>What is the date you started or plan to start your internship?</label>
+                        <label>10. What is the date you started or plan to start your internship?<span style={{ color: "red", fontSize:"1.1rem"}}>*</span></label>
                         <input
                             id="date"
                             name="date"
@@ -108,7 +108,7 @@ class FormI1A extends Component {
                         />
                         <br/>
                         {/*Specify Supervisor E-Mail address for the supervisor to fill his/her information*/}
-                        <label>Specify Supervisor E-Mail address for the supervisor to fill his/her information</label>
+                        <label>11. Specify Supervisor E-Mail address for the supervisor to fill his/her information<span style={{ color: "red", fontSize:"1.1rem"}}>*</span></label>
                         <input
                             id="s_mail"
                             name="s_mail"

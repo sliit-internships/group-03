@@ -17,6 +17,11 @@ import RegisterScreen from "./components/loginscreens/RegisterScreen";
 import ForgotPasswordScreen from "./components/loginscreens/ForgotPasswordScreen";
 import ResetPasswordScreen from "./components/loginscreens/ResetPasswordScreen";
 
+// Forms
+import FormI6 from "./Forms/FormI6/FormI6";
+import FormI1A from "./Forms/FormI_1A/FormI_1A";
+import FormI1C from "./Forms/FormI1C/FormI1C";
+import FormI3A from "./Forms/FormI3A/FormI3A";
 
 const App = () => {
   return (
@@ -37,6 +42,10 @@ const App = () => {
             path="/passwordreset/:resetToken"
             component={ResetPasswordScreen}
           />
+          <Route exact path="/fI1A" component={FormI1A} />
+          <Route exact path="/fI1C" component={FormI1C} />
+          <Route exact path="/fI3A" component={FormI3A} />
+          <Route exact path="/fI6" component={FormI6} />
           <Route path="/admin" component={Admin} />
           <Redirect from="/" to="/admin/dashboard" />
         </Switch>
