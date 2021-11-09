@@ -1,11 +1,14 @@
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 //Layouts
 import HomeLayoutRoute from "./components/layouts/HomeLayout";
 
 //components
 import Home from './components/Home';
-import Admin from './components/Admin';
+import Admin from './components/Users/Admin';
+import Student from './components/Users/Student';
+import Evaluator from './components/Users/Evaluator';
+import Supervisor from './components/Users/Supervisor';
 
 // Routing
 import PrivateRoute from "./components/routing/PrivateRoute";
@@ -38,7 +41,9 @@ const App = () => {
             component={ResetPasswordScreen}
           />
           <Route path="/admin" component={Admin} />
-          <Redirect from="/" to="/admin/dashboard" />
+          <Route path="/student" component={Student} />
+          <Route path="/evaluator" component={Evaluator} />
+          <Route path="/Supervisor" component={Supervisor} />
         </Switch>
       </div>
     </Router>
@@ -47,13 +52,14 @@ const App = () => {
 
 export default App;
 
-/*
-<Route 
-exact
-path="/admin" 
-component={Admin} 
-/>
 
-<AdminLayoutRoute exact path="/Admin" component={Admin} />
+/*          <Route path="/admin" component={Admin} />*/ 
 
-*/
+/*          <Route path="/student" component={Student} />*/
+
+
+/**
+          <Redirect from="/" to="/admin/dashboard" />
+
+
+          <Redirect from="/" to="/student/dashboard" /> */
