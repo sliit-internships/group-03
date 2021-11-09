@@ -5,8 +5,6 @@ import {
   hexToRgb,
 } from"../../material-dashboard-react";
 
-//from "assets/jss/material-dashboard-react.js";
-
 const dashboardStyle = {
   successText: {
     color: successColor[0],
