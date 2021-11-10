@@ -31,6 +31,8 @@ import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 import DashboardPage from "../components/views/Dashboard/SupervisorDashboard";
 import UserProfile from "../components/views/UserProfile/SupervisorProfile.js";
 import TableList from "../components/views/TableList/SupervisorTableList.js";
+import DescriptionIcon from "@mui/icons-material/Description";
+import SupervisorForms from "../components/views/FormPanel/SupervisorForms";
 //import Typography from "./components/views/Typography/Typography.js";
 //import Icons from "./components/views/Icons/Icons.js";
 //import Maps from "./components/views/Maps/Maps.js";
@@ -60,6 +62,14 @@ const dashboardRoutes = [
     name: "Table List",
     icon: ContentPasteIcon,
     component: TableList,
+    layout: "/supervisor",
+  },
+
+  {
+    path: "/forms_supervisor",
+    name: "Forms",
+    icon: DescriptionIcon,
+    component: SupervisorForms,
     layout: "/supervisor",
   },
 

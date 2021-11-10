@@ -31,6 +31,8 @@ import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 import DashboardPage from "../components/views/Dashboard/AdminDashboard";
 import UserProfile from "../components/views/UserProfile/AdminProfile.js";
 import TableList from "../components/views/TableList/AdminTableList.js";
+import DescriptionIcon from "@mui/icons-material/Description";
+import FormPanel from "../components/views/FormPanel/FormPanel";
 //import Typography from "./components/views/Typography/Typography.js";
 //import Icons from "./components/views/Icons/Icons.js";
 //import Maps from "./components/views/Maps/Maps.js";
@@ -62,6 +64,14 @@ const dashboardRoutes = [
     component: TableList,
     layout: "/admin",
   },
+
+  /*{
+    path: "/forms_admin",
+    name: "Forms",
+    icon: DescriptionIcon,
+    component: FormPanel,
+    layout: "/admin",
+  },*/
 
 /*
   {

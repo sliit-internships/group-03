@@ -31,6 +31,8 @@ import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 import DashboardPage from "../components/views/Dashboard/StudentDashboard";
 import UserProfile from "../components/views/UserProfile/StudentProfile.js";
 import TableList from "../components/views/TableList/StudentTableList.js";
+import DescriptionIcon from "@mui/icons-material/Description";
+import StudentForms from "../components/views/FormPanel/StudentForms";
 //import Typography from "./components/views/Typography/Typography.js";
 //import Icons from "./components/views/Icons/Icons.js";
 //import Maps from "./components/views/Maps/Maps.js";
@@ -60,6 +62,14 @@ const dashboardRoutes = [
     name: "Table List",
     icon: ContentPasteIcon,
     component: TableList,
+    layout: "/student",
+  },
+
+  {
+    path: "/forms_student",
+    name: "Forms",
+    icon: DescriptionIcon,
+    component: StudentForms,
     layout: "/student",
   },
 
