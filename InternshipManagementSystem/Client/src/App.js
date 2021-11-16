@@ -9,6 +9,7 @@ import Admin from './components/Users/Admin';
 import Student from './components/Users/Student';
 import Evaluator from './components/Users/Evaluator';
 import Supervisor from './components/Users/Supervisor';
+import FormSidebar from "./components/FormSidebar";
 
 // Routing
 import PrivateRoute from "./components/routing/PrivateRoute";
@@ -28,6 +29,7 @@ import FormI3A from "./Forms/FormI3A/FormI3A";
 import FormI1B from "./Forms/FormI1B/FormI1B";
 import FormI5A from "./Forms/FormI5A/FormI5A";
 import FormI3ASupervisor from "./Forms/FormI3A/supervisor/FormI3ASupervisor";
+
 
 const App = () => {
   return (
@@ -58,7 +60,8 @@ const App = () => {
           <Route path="/admin" component={Admin} />
           <Route path="/student" component={Student} />
           <Route path="/evaluator" component={Evaluator} />
-          <Route path="/Supervisor" component={Supervisor} />
+          <Route path="/supervisor" component={Supervisor} />
+          <Route path="/form" component={FormSidebar} />
         </Switch>
       </div>
     </Router>

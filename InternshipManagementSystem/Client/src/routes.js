@@ -30,6 +30,10 @@ import DashboardPage from "./components/views/Dashboard/Dashboard";
 import UserProfile from "./components/views/UserProfile/UserProfile.js";
 import TableList from "./components/views/TableList/TableList.js";
 import FormPanel from './components/views/FormPanel/FormPanel';
+import FormI6 from "./Forms/FormI6/FormI6";
+import FormI1A from "./Forms/FormI_1A/FormI_1A";
+import FormI1C from "./Forms/FormI1C/FormI1C";
+import FormI3A from "./Forms/FormI3A/FormI3A";
 //import Typography from "./components/views/Typography/Typography.js";
 //import Icons from "./components/views/Icons/Icons.js";
 //import Maps from "./components/views/Maps/Maps.js";
@@ -39,35 +43,35 @@ import FormPanel from './components/views/FormPanel/FormPanel';
 
 const dashboardRoutes = [
   {
-    path: "/dashboard",
-    name: "Dashboard",
-    icon: Dashboard,
-    component: DashboardPage,
-    layout: "/admin",
-  },
-
-  {
-    path: "/user",
-    name: "User Profile",
-    icon: Person,
-    component: UserProfile,
-    layout: "/admin",
-  },
-
-  {
-    path: "/table",
-    name: "Table List",
-    icon: "content_paste",
-    component: TableList,
-    layout: "/admin",
-  },
-
-  {
-    path: "/forms",
-    name: "Forms",
+    path: "/f1",
+    name: "Form I-1A",
     icon: DescriptionIcon,
-    component: FormPanel,
-    layout: "/admin",
+    component: FormI1A,
+    layout: "/form",
+  },
+
+  {
+    path: "/f2",
+    name: "Form I-1C",
+    icon: DescriptionIcon,
+    component: FormI1C,
+    layout: "/form",
+  },
+
+  {
+    path: "/f3",
+    name: "Form I-3A",
+    icon: DescriptionIcon,
+    component: FormI3A,
+    layout: "/form",
+  },
+
+  {
+    path: "/f4",
+    name: "Form I-6",
+    icon: DescriptionIcon,
+    component: FormI6,
+    layout: "/form",
   },
 /*
   {
