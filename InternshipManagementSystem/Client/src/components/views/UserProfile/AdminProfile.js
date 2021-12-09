@@ -14,7 +14,7 @@ import CardAvatar from "../../Card/CardAvatar.js";
 import CardBody from "../../Card/CardBody.js";
 import CardFooter from "../../Card/CardFooter.js";
 
-import avatar from "../../../assets/img/faces/marc.jpg";
+import avatar from "../../../Assets/img/faces/marc.jpg";
 
 const styles = {
   cardCategoryWhite: {

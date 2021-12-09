@@ -28,9 +28,10 @@ import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 //import Language from "@material-ui/icons/Language";
 
 // core components/views for Evaluator layout
-import DashboardPage from "../components/views/Dashboard/EvaluatorDashboard";
-import UserProfile from "../components/views/UserProfile/EvaluatorProfile.js";
-import TableList from "../components/views/TableList/EvaluatorTableList.js";
+import DashboardPage from "../Components/views/Dashboard/EvaluatorDashboard";
+import UserProfile from "../Components/views/UserProfile/EvaluatorProfile";
+import TableList from "../Components/views/TableList/EvaluatorTableList";
+
 //import Typography from "./components/views/Typography/Typography.js";
 //import Icons from "./components/views/Icons/Icons.js";
 //import Maps from "./components/views/Maps/Maps.js";

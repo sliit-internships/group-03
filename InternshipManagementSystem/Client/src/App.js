@@ -1,65 +1,49 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React from 'react';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
-//Layouts
-import HomeLayoutRoute from "./components/layouts/HomeLayout";
+// Home
+import Home from './Components/Home';
 
-//components
-import Home from './components/Home';
-import Admin from './components/Users/Admin';
-import Student from './components/Users/Student';
-import Evaluator from './components/Users/Evaluator';
-import Supervisor from './components/Users/Supervisor';
+// Authontication
+import Login from './Components/Authontication/Login';
+import StudentRegister from './Components/Authontication/RegisterStudent';
+import AdminRegister from './Components/Authontication/RegisterAdmin';
+import SupervisorRegister from './Components/Authontication/RegisterSupervisor';
+import EvaluatorRegister from './Components/Authontication/RegisterEvaluator';
 
-// Routing
-import PrivateRoute from "./components/routing/PrivateRoute";
+// Password
+import ForgotPassowrd from './Components/Authontication/ForgotPassowrd';
+import ResetPassowrd from './Components/Authontication/ResetPassowrd';
 
-// Screens
-import PrivateScreen from "./components/loginscreens/PrivateScreen";
-import LoginScreen from "./components/loginscreens/LoginScreen";
-import RegisterScreen from "./components/loginscreens/RegisterScreen";
-import ForgotPasswordScreen from "./components/loginscreens/ForgotPasswordScreen";
-import ResetPasswordScreen from "./components/loginscreens/ResetPasswordScreen";
+// Routes
+import PrivateRoute from './Hooks/PrivateRoute';
+import UnPrivateRoute from './Hooks/UnPrivateRoute';
 
+// Users
+import Admin  from './Components/Users/Admin';
+import Student  from './Components/Users/Student';
+import Evaluator  from './Components/Users/Evaluator';
+import Supervisor  from './Components/Users/Supervisor';
 
-const App = () => {
+function App() {
   return (
     <Router>
-      <div className="app">
-        <Switch>
-          <HomeLayoutRoute exact path="/" component={Home} />
-          <PrivateRoute exact path="/" component={PrivateScreen} />
-          <Route exact path="/login" component={LoginScreen} />
-          <Route exact path="/register" component={RegisterScreen} />
-          <Route
-            exact
-            path="/forgotpassword"
-            component={ForgotPasswordScreen}
-          />
-          <Route
-            exact
-            path="/passwordreset/:resetToken"
-            component={ResetPasswordScreen}
-          />
-          <Route path="/admin" component={Admin} />
-          <Route path="/student" component={Student} />
-          <Route path="/evaluator" component={Evaluator} />
-          <Route path="/Supervisor" component={Supervisor} />
-        </Switch>
-      </div>
+      <Route exact path="/" component={Home}/>
+
+      <UnPrivateRoute path="/login" component={Login}/>
+      <UnPrivateRoute path="/register" component={StudentRegister}/>
+      <UnPrivateRoute path="/AdminRegister" component={AdminRegister}/>
+      <UnPrivateRoute path="/SupervisorRegister" component={SupervisorRegister}/>
+      <UnPrivateRoute path="/EvaluatorRegister" component={EvaluatorRegister}/>
+      <UnPrivateRoute path="/forgotPassowrd" component={ForgotPassowrd}/>
+      <UnPrivateRoute path="/resetpassowrd" component={ResetPassowrd}/>
+
+      <PrivateRoute path="/admin" roles={["admin"]} component={Admin}/>
+      <PrivateRoute path="/student" roles={["student"]} component={Student}/>
+      <PrivateRoute path="/evaluator" roles={["evaluator"]} component={Evaluator}/>
+      <PrivateRoute path="/supervisor" roles={["supervisor"]} component={Supervisor}/>
     </Router>
   );
-};
+}
 
 export default App;
-
-
-/*          <Route path="/admin" component={Admin} />*/ 
-
-/*          <Route path="/student" component={Student} />*/
-
-
-/**
-          <Redirect from="/" to="/admin/dashboard" />
-
-
-          <Redirect from="/" to="/student/dashboard" /> */

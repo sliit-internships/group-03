@@ -11,7 +11,7 @@ import Clear from "@material-ui/icons/Clear";
 import Check from "@material-ui/icons/Check";
 // core components
 //import styles from "assets/jss/material-dashboard-react/components/customInputStyle.js";
-import styles from "../../assets/jss/material-dashboard-react/components/customInputStyle";
+import styles from "../../Assets/jss/material-dashboard-react/components/customInputStyle";
 
 const useStyles = makeStyles(styles);
 

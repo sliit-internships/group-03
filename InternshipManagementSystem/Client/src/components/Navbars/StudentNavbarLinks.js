@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from 'react';
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -20,7 +20,11 @@ import CustomInput from "../CustomInput/CustomInput";
 
 import Button from "../CustomButtons/Button";
 
-import styles from "../../assets/jss/material-dashboard-react/components/headerLinksStyle";
+import styles from "../../Assets/jss/material-dashboard-react/components/headerLinksStyle";
+
+
+import AuthService from '../../Services/AuthService';
+import { AuthContext } from '../../Context/AuthContext';
 
 const useStyles = makeStyles(styles);
 
@@ -48,6 +52,18 @@ export default function AdminNavbarLinks() {
   const handleCloseProfile = () => {
     setOpenProfile(null);
   };
+
+  const {setIsAuthenticated,setUser} = useContext(AuthContext);
+
+  const onClickLogoutHandler = ()=>{
+    AuthService.logout().then(data=>{
+        if(data.success){
+            setUser(data.user);
+            setIsAuthenticated(false);
+        }
+    });
+}
+
   return (
     <div>
       <div className={classes.searchWrapper}>
@@ -208,7 +224,7 @@ export default function AdminNavbarLinks() {
                     </MenuItem>
                     <Divider light />
                     <MenuItem
-                      onClick={handleCloseProfile}
+                      onClick={onClickLogoutHandler}
                       className={classes.dropdownItem}
                     >
                       Logout

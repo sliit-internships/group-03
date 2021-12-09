@@ -50,7 +50,7 @@ import {
 //from "variables/charts.js";
 
 //import styles from "assets/jss/material-dashboard-react/views/dashboardStyle.js";
-import styles from "../../../assets/jss/material-dashboard-react/views/dashboardStyle";
+import styles from "../../../Assets/jss/material-dashboard-react/views/dashboardStyle";
 
 const useStyles = makeStyles(styles);
 

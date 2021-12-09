@@ -20,7 +20,7 @@ import CustomInput from "../CustomInput/CustomInput";
 
 import Button from "../CustomButtons/Button";
 
-import styles from "../../assets/jss/material-dashboard-react/components/headerLinksStyle";
+import styles from "../../Assets/jss/material-dashboard-react/components/headerLinksStyle";
 
 const useStyles = makeStyles(styles);
 

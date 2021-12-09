@@ -13,7 +13,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Icon from "@material-ui/core/Icon";
 // core components
 import AdminNavbarLinks from "../Navbars/AdminNavbarLinks";
-import styles from "../../assets/jss/material-dashboard-react/components/sidebarStyle";
+import styles from "../../Assets/jss/material-dashboard-react/components/sidebarStyle";
 
 const useStyles = makeStyles(styles);
 

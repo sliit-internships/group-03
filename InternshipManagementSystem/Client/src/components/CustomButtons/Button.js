@@ -9,7 +9,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 
 //import styles from "assets/jss/material-dashboard-react/components/buttonStyle.js";
-import styles from "../../assets/jss/material-dashboard-react/components/buttonStyle";
+import styles from "../../Assets/jss/material-dashboard-react/components/buttonStyle";
 
 const useStyles = makeStyles(styles);
 

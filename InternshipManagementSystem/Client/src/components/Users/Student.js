@@ -10,13 +10,13 @@ import Navbar from "../Navbars/Navbar.js";
 import Footer from "../Footer/Footer.js";
 import Sidebar from "../Sidebar/Sidebar";
 
-import routes from "../../routes/StudentRoutes";
+import routes from "../../Routes/StudentRoutes";
 
-import styles from "../../assets/jss/material-dashboard-react/layouts/studentStyle";
+import styles from "../../Assets/jss/material-dashboard-react/layouts/studentStyle";
 
-import bgImage from "../../assets/img/sidebar-2.jpg";
+import bgImage from "../../Assets/img/sidebar-2.jpg";
 
-import logo from "../../assets/img/reactlogo.png";
+import logo from "../../Assets/img/reactlogo.png";
 
 let ps;
 

@@ -1,7 +1,7 @@
-import addroutes from "../routes/AdminRoutes";
-import sturoutes from "../routes/StudentRoutes";
-import suproutes from "../routes/SupervisorRoutes";
-import evaroutes from "../routes/EvaluatorRoutes";
+import addroutes from "../Routes/AdminRoutes";
+import sturoutes from "../Routes/StudentRoutes";
+import suproutes from "../Routes/SupervisorRoutes";
+import evaroutes from "../Routes/EvaluatorRoutes";
 
 export const useRouteName = () => {
   let name = "";

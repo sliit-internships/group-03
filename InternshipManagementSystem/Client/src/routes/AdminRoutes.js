@@ -16,6 +16,7 @@
 
 */
 
+
 // @material-ui/icons
 import Dashboard from "@material-ui/icons/Dashboard";
 import Person from "@material-ui/icons/Person";
@@ -28,17 +29,16 @@ import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 //import Language from "@material-ui/icons/Language";
 
 // core components/views for Admin layout
-import DashboardPage from "../components/views/Dashboard/AdminDashboard";
-import UserProfile from "../components/views/UserProfile/AdminProfile.js";
-import TableList from "../components/views/TableList/AdminTableList.js";
+import DashboardPage from "../Components/views/Dashboard/AdminDashboard";
+import UserProfile from "../Components/views/UserProfile/AdminProfile";
+import TableList from "../Components/views/TableList/AdminTableList";
 //import Typography from "./components/views/Typography/Typography.js";
 //import Icons from "./components/views/Icons/Icons.js";
 //import Maps from "./components/views/Maps/Maps.js";
 //import NotificationsPage from "./components/views/Notifications/Notifications.js";
 
-
-
 const dashboardRoutes = [
+
   {
     path: "/dashboard",
     name: "Admin Dashboard",

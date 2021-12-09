@@ -37,7 +37,7 @@ import GridContainer from "../../dashcomponents/Grid/GridContainer.js";
   completedTasksChart,
 } from "../../variables/charts";*/
 
-import styles from "../../../assets/jss/material-dashboard-react/views/dashboardStyle";
+import styles from "../../../Assets/jss/material-dashboard-react/views/dashboardStyle";
 
 const useStyles = makeStyles(styles);
 

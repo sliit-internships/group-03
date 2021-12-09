@@ -9,7 +9,7 @@ import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
 // core components
 //import styles from "assets/jss/material-dashboard-react/components/tableStyle.js";
-import styles from "../../assets/jss/material-dashboard-react/components/tableStyle";
+import styles from "../../Assets/jss/material-dashboard-react/components/tableStyle";
 
 const useStyles = makeStyles(styles);
 

@@ -7,7 +7,7 @@ import ListItem from "@material-ui/core/ListItem";
 import List from "@material-ui/core/List";
 // core components
 //import styles from "assets/jss/material-dashboard-react/components/footerStyle.js";
-import styles from "../../assets/jss/material-dashboard-react/components/footerStyle";
+import styles from "../../Assets/jss/material-dashboard-react/components/footerStyle";
 
 const useStyles = makeStyles(styles);
 

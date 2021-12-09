@@ -15,9 +15,9 @@ import StudentNavbarLinks from "../Navbars/StudentNavbarLinks";
 import Button from "../CustomButtons/Button";
 
 //hooks
-import { useRouteName } from "../../hooks/useRouteName";
+import { useRouteName } from "../../Hooks/useRouteName";
 
-import styles from "../../assets/jss/material-dashboard-react/components/headerStyle";
+import styles from "../../Assets/jss/material-dashboard-react/components/headerStyle";
 
 const useStyles = makeStyles(styles);
 

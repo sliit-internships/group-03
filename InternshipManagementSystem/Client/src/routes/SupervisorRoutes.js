@@ -28,9 +28,10 @@ import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 //import Language from "@material-ui/icons/Language";
 
 // core components/views for Supervisor layout
-import DashboardPage from "../components/views/Dashboard/SupervisorDashboard";
-import UserProfile from "../components/views/UserProfile/SupervisorProfile.js";
-import TableList from "../components/views/TableList/SupervisorTableList.js";
+import DashboardPage from "../Components/views/Dashboard/SupervisorDashboard";
+import UserProfile from "../Components/views/UserProfile/SupervisorProfile";
+import TableList from "../Components/views/TableList/SupervisorTableList";
+
 //import Typography from "./components/views/Typography/Typography.js";
 //import Icons from "./components/views/Icons/Icons.js";
 //import Maps from "./components/views/Maps/Maps.js";
