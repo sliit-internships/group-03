@@ -5,8 +5,6 @@ const passportConfig = require('../passport');
 const JWT = require('jsonwebtoken');
 const User = require('../models/User');
 
-
-
 const signToken = userID =>{
     return JWT.sign({
         iss : "NoobCoder",
@@ -48,24 +46,6 @@ userRouter.get('/logout',passport.authenticate('jwt',{session : false}),(req,res
     res.json({user:{email : "", role : ""},success : true});
 });
 
-userRouter.post('/todo',passport.authenticate('jwt',{session : false}),(req,res)=>{
-    const todo = new Todo(req.body);
-    todo.save(err=>{
-        if(err)
-            res.status(500).json({message : {msgBody : "Error has occured", msgError: true}});
-        else{
-            req.user.todos.push(todo);
-            req.user.save(err=>{
-                if(err)
-                    res.status(500).json({message : {msgBody : "Error has occured", msgError: true}});
-                else
-                    res.status(200).json({message : {msgBody : "Successfully created todo", msgError : false}});
-            });
-        }
-    })
-});
-
-
 userRouter.get('/admin',passport.authenticate('jwt',{session : false}),(req,res)=>{
     if(req.user.role === 'admin'){
         res.status(200).json({message : {msgBody : 'You are an admin', msgError : false}});
@@ -103,8 +83,81 @@ userRouter.get('/authenticated',passport.authenticate('jwt',{session : false}),(
     res.status(200).json({isAuthenticated : true, user : {email,role}});
 });
 
+userRouter.post('/forgotpassword'),passport.authenticate('local',{session : false}),(req,res)=>{
+    //res.send("Forgot Password Route");
+    const {email} = req.body;
 
+    try {
+        const user = User.findOne({email});
 
+        if(!user) {
+            return next(new ErrorResponse("Email could not be sent", 404));
+        }
 
+        const resetToken = user.getResetPasswordToken();
+
+        user.save();
+
+        const reseturl = `http://localhost:3000/passwordreset/${resetToken}`;
+
+        const message = `
+            <h1>You have requested a password reset</h1>
+            <p> Please go to this link to reset your password </p>
+            <a href=${reseturl} clicktracking=off>${reseturl}</a>
+        `
+        try {
+            sendEmail({
+                to: user.email,
+                subject: "Please Reset Request",
+                text: message
+            });
+            res.status(200).json({ success: true, data: "Email Sent"});
+        } catch (error) {
+            user.resetPasswordToken = undefined;
+            user.resetPasswordExpire = undefined;
+
+            user.save();
+
+            return next(new ErrorResponse("Email could not be send", 500))
+        }
+
+    } catch (error) {
+        next(error);
+    }
+};
+
+userRouter.put('/resetpassword/:resetToken'),passport.authenticate('local',{session : false}),(req,res)=>{
+    //res.send("Reset Password Route");
+    // Compare token in URL params to hashed token
+    const resetPasswordToken = crypto
+      .createHash("sha256")
+      .update(req.params.resetToken)
+      .digest("hex");
+  
+    try {
+      const user = await User.findOne({
+        resetPasswordToken,
+        resetPasswordExpire: { $gt: Date.now() },
+      });
+  
+      if (!user) {
+        return next(new ErrorResponse("Invalid Token", 400));
+      }
+  
+      user.password = req.body.password;
+      user.resetPasswordToken = undefined;
+      user.resetPasswordExpire = undefined;
+  
+      user.save();
+  
+      res.status(201).json({
+        success: true,
+        data: "Password Updated Success",
+        token: user.getSignedJwtToken(),
+      });
+    } catch (err) {
+      next(err);
+    }
+};
 
 module.exports = userRouter;
