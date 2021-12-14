@@ -20,6 +20,7 @@
 import Dashboard from "@material-ui/icons/Dashboard";
 import Person from "@material-ui/icons/Person";
 import ContentPasteIcon from '@mui/icons-material/ContentPaste';
+import DescriptionIcon from "@mui/icons-material/Description";
 //import LibraryBooks from "@material-ui/icons/LibraryBooks";
 //import BubbleChart from "@material-ui/icons/BubbleChart";
 //import LocationOn from "@material-ui/icons/LocationOn";
@@ -33,6 +34,10 @@ import UserProfile from "../components/views/UserProfile/StudentProfile.js";
 import TableList from "../components/views/TableList/StudentTableList.js";
 import DescriptionIcon from "@mui/icons-material/Description";
 import StudentForms from "../components/views/FormPanel/StudentForms";
+import FI1A from "../components/views/Forms/Panel/FI1A";
+import FI1C from "../components/views/Forms/Panel/FI1C";
+import FI3A from "../components/views/Forms/Panel/FI3A";
+import FI6 from "../components/views/Forms/Panel/FI6";
 //import Typography from "./components/views/Typography/Typography.js";
 //import Icons from "./components/views/Icons/Icons.js";
 //import Maps from "./components/views/Maps/Maps.js";
@@ -66,10 +71,34 @@ const dashboardRoutes = [
   },
 
   {
-    path: "/forms_student",
-    name: "Forms",
+    path: "/formI1A",
+    name: "Form I-1A",
     icon: DescriptionIcon,
-    component: StudentForms,
+    component: FI1A,
+    layout: "/student",
+  },
+
+  {
+    path: "/formI1C",
+    name: "Form I-1C",
+    icon: DescriptionIcon,
+    component: FI1C,
+    layout: "/student",
+  },
+
+  {
+    path: "/formI3A",
+    name: "Form I-3A",
+    icon: DescriptionIcon,
+    component: FI3A,
+    layout: "/student",
+  },
+
+  {
+    path: "/formI6",
+    name: "Form I-6",
+    icon: DescriptionIcon,
+    component: FI6,
     layout: "/student",
   },
 
