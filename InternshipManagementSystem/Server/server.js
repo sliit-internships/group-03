@@ -19,6 +19,15 @@ const formI3AOnlineRoutes=require("./routes/FormI1BOnlineRoutes");
 //middleware
 app.use(express.json());
 
+// Configuring middlewares
+app.use(express.static('public')); //to access the files in public folder
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(cors());
+app.use(fileUpload());
+
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/private', require('./routes/private'));
 
