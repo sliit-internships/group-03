@@ -31,6 +31,13 @@ app.use(fileUpload());
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/private', require('./routes/private'));
 
+// Configuring routes
+app.use("/api/formI1A", formI1ARoutes.router);
+app.use("/api/formI1C", formI1CRoutes.router);
+app.use("/api/formI1B", formI1BRoutes.router);
+app.use("/api/formI5A", formI5ARoutes.router);
+app.use("/api/formI1BOnline", formI3AOnlineRoutes.router);
+
 //Error Handler
 app.use(errorHandler);
 
