@@ -20,6 +20,7 @@
 import Dashboard from "@material-ui/icons/Dashboard";
 import Person from "@material-ui/icons/Person";
 import ContentPasteIcon from '@mui/icons-material/ContentPaste';
+import DescriptionIcon from "@mui/icons-material/Description";
 //import LibraryBooks from "@material-ui/icons/LibraryBooks";
 //import BubbleChart from "@material-ui/icons/BubbleChart";
 //import LocationOn from "@material-ui/icons/LocationOn";
@@ -33,6 +34,9 @@ import UserProfile from "../components/views/UserProfile/SupervisorProfile.js";
 import TableList from "../components/views/TableList/SupervisorTableList.js";
 import DescriptionIcon from "@mui/icons-material/Description";
 import SupervisorForms from "../components/views/FormPanel/SupervisorForms";
+import FI3Aapproval from "../components/views/Forms/Panel/FI3Aapproval";
+import FI5A from "../components/views/Forms/Panel/FI5A";
+import FI1B from "../components/views/Forms/Panel/FI1B";
 //import Typography from "./components/views/Typography/Typography.js";
 //import Icons from "./components/views/Icons/Icons.js";
 //import Maps from "./components/views/Maps/Maps.js";
@@ -66,22 +70,38 @@ const dashboardRoutes = [
   },
 
   {
-    path: "/forms_supervisor",
-    name: "Forms",
+    path: "/FI1B",
+    name: "Form I-1B",
     icon: DescriptionIcon,
-    component: SupervisorForms,
+    component: FI1B,
     layout: "/supervisor",
   },
 
-/*
   {
-    path: "/typography",
-    name: "Typography",
-    icon: LibraryBooks,
-    component: Typography,
+    path: "/FI1BOnline",
+    name: "Form I-3A Approval",
+    icon: DescriptionIcon,
+    component: FI3Aapproval,
     layout: "/supervisor",
   },
-*/
+
+  {
+    path: "/FI5A",
+    name: "Form I-5A",
+    icon: DescriptionIcon,
+    component: FI5A,
+    layout: "/supervisor",
+  },
+
+  /*
+    {
+      path: "/typography",
+      name: "Typography",
+      icon: LibraryBooks,
+      component: Typography,
+      layout: "/supervisor",
+    },
+  */
 /*
   {
     path: "/icons",
