@@ -1,4 +1,7 @@
 require('dotenv').config({path: "./config.env"});
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const fileUpload = require('express-fileupload');
 const express = require("express");
 const connectDB = require('./config/db');
 const errorHandler = require('./middleware/error');
@@ -7,7 +10,12 @@ const errorHandler = require('./middleware/error');
 connectDB();
 
 const app = express();
-
+//routes
+const formI1ARoutes=require("./routes/FormI1ARoutes");
+const formI1CRoutes=require("./routes/FormI1CRoutes");
+const formI1BRoutes=require("./routes/FormI1BRoutes");
+const formI5ARoutes=require("./routes/FormI5ARoutes");
+const formI3AOnlineRoutes=require("./routes/FormI1BOnlineRoutes");
 //middleware
 app.use(express.json());
 
