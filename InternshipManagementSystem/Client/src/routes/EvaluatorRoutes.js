@@ -33,6 +33,7 @@ import UserProfile from "../components/views/UserProfile/EvaluatorProfile.js";
 import TableList from "../components/views/TableList/EvaluatorTableList.js";
 import DescriptionIcon from "@mui/icons-material/Description";
 import FormPanel from "../components/views/FormPanel/FormPanel";
+import AllResponses from "../components/views/Forms/Responses/AllResponses";
 //import Typography from "./components/views/Typography/Typography.js";
 //import Icons from "./components/views/Icons/Icons.js";
 //import Maps from "./components/views/Maps/Maps.js";
@@ -62,6 +63,14 @@ const dashboardRoutes = [
     name: "Table List",
     icon: ContentPasteIcon,
     component: TableList,
+    layout: "/evaluator",
+  },
+
+  {
+    path: "/responses",
+    name: "Responses",
+    icon: ContentPasteIcon,
+    component: AllResponses,
     layout: "/evaluator",
   },
 
