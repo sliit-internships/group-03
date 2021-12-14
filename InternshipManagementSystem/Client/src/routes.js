@@ -15,33 +15,25 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-
 // @material-ui/icons
 import Dashboard from "@material-ui/icons/Dashboard";
 import Person from "@material-ui/icons/Person";
-import ContentPasteIcon from '@mui/icons-material/ContentPaste';
+import DescriptionIcon from '@mui/icons-material/Description';
 //import LibraryBooks from "@material-ui/icons/LibraryBooks";
 //import BubbleChart from "@material-ui/icons/BubbleChart";
 //import LocationOn from "@material-ui/icons/LocationOn";
 //import Notifications from "@material-ui/icons/Notifications";
 //import Unarchive from "@material-ui/icons/Unarchive";
 //import Language from "@material-ui/icons/Language";
-
-// core components/views for Evaluator layout
-<<<<<<< HEAD:Intern Management System/Client/src/Routes/EvaluatorRoutes.js
-import DashboardPage from "../Components/views/Dashboard/EvaluatorDashboard";
-import UserProfile from "../Components/views/UserProfile/EvaluatorProfile";
-import TableList from "../Components/views/TableList/EvaluatorTableList";
-import AllResponses from "../Components/views/Forms/Responses/AllResponses";
-
-=======
-import DashboardPage from "../components/views/Dashboard/EvaluatorDashboard";
-import UserProfile from "../components/views/UserProfile/EvaluatorProfile.js";
-import TableList from "../components/views/TableList/EvaluatorTableList.js";
-import DescriptionIcon from "@mui/icons-material/Description";
-import FormPanel from "../components/views/FormPanel/FormPanel";
-import AllResponses from "../components/views/Forms/Responses/AllResponses";
->>>>>>> main:InternshipManagementSystem/Client/src/routes/EvaluatorRoutes.js
+// core components/views for Admin layout
+import DashboardPage from "./components/views/Dashboard/Dashboard";
+import UserProfile from "./components/views/UserProfile/UserProfile.js";
+import TableList from "./components/views/TableList/TableList.js";
+import FormPanel from './components/views/FormPanel/FormPanel';
+import FormI6 from "./Forms/FormI6/FormI6";
+import FormI1A from "./Forms/FormI_1A/FormI_1A";
+import FormI1C from "./Forms/FormI1C/FormI1C";
+import FormI3A from "./Forms/FormI3A/FormI3A";
 //import Typography from "./components/views/Typography/Typography.js";
 //import Icons from "./components/views/Icons/Icons.js";
 //import Maps from "./components/views/Maps/Maps.js";
@@ -51,55 +43,43 @@ import AllResponses from "../components/views/Forms/Responses/AllResponses";
 
 const dashboardRoutes = [
   {
-    path: "/dashboard",
-    name: "Dashboard",
-    icon: Dashboard,
-    component: DashboardPage,
-    layout: "/evaluator",
-  },
-
-  {
-    path: "/user",
-    name: "User Profile",
-    icon: Person,
-    component: UserProfile,
-    layout: "/evaluator",
-  },
-
-  {
-    path: "/table",
-    name: "Table List",
-    icon: ContentPasteIcon,
-    component: TableList,
-    layout: "/evaluator",
-  },
-
-  {
-    path: "/responses",
-    name: "Responses",
-    icon: ContentPasteIcon,
-    component: AllResponses,
-    layout: "/evaluator",
-  },
-
-<<<<<<< HEAD:Intern Management System/Client/src/Routes/EvaluatorRoutes.js
-=======
-/*  {
-    path: "/forms_evaluator",
-    name: "Forms",
+    path: "/f1",
+    name: "Form I-1A",
     icon: DescriptionIcon,
-    component: FormPanel,
-    layout: "/evaluator",
-  },*/
+    component: FormI1A,
+    layout: "/form",
+  },
 
->>>>>>> main:InternshipManagementSystem/Client/src/routes/EvaluatorRoutes.js
+  {
+    path: "/f2",
+    name: "Form I-1C",
+    icon: DescriptionIcon,
+    component: FormI1C,
+    layout: "/form",
+  },
+
+  {
+    path: "/f3",
+    name: "Form I-3A",
+    icon: DescriptionIcon,
+    component: FormI3A,
+    layout: "/form",
+  },
+
+  {
+    path: "/f4",
+    name: "Form I-6",
+    icon: DescriptionIcon,
+    component: FormI6,
+    layout: "/form",
+  },
 /*
   {
     path: "/typography",
     name: "Typography",
     icon: LibraryBooks,
     component: Typography,
-    layout: "/evaluator",
+    layout: "/admin",
   },
 */
 /*
@@ -108,7 +88,7 @@ const dashboardRoutes = [
     name: "Icons",
     icon: BubbleChart,
     component: Icons,
-    layout: "/evaluator",
+    layout: "/admin",
   },
 */
 /*
@@ -117,7 +97,7 @@ const dashboardRoutes = [
     name: "Maps",
     icon: LocationOn,
     component: Maps,
-    layout: "/evaluator",
+    layout: "/admin",
   },
 */
 /*
@@ -126,7 +106,7 @@ const dashboardRoutes = [
     name: "Notifications",
     icon: Notifications,
     component: NotificationsPage,
-    layout: "/evaluator",
+    layout: "/admin",
   },
 */
 /*
@@ -138,6 +118,16 @@ const dashboardRoutes = [
     layout: "/rtl",
   },
 */
+/*
+  {
+    path: "/upgrade-to-pro",
+    name: "Upgrade To PRO",
+    icon: Unarchive,
+    component: UpgradeToPro,
+    layout: "/admin",
+  },
+*/
+
 ];
 
 export default dashboardRoutes;

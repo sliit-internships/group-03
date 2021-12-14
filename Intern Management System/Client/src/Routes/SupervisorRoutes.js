@@ -29,6 +29,7 @@ import DescriptionIcon from "@mui/icons-material/Description";
 //import Language from "@material-ui/icons/Language";
 
 // core components/views for Supervisor layout
+<<<<<<< HEAD:Intern Management System/Client/src/Routes/SupervisorRoutes.js
 import DashboardPage from "../Components/views/Dashboard/SupervisorDashboard";
 import UserProfile from "../Components/views/UserProfile/SupervisorProfile";
 import TableList from "../Components/views/TableList/SupervisorTableList";
@@ -36,6 +37,16 @@ import FI1B from "../Components/views/Forms/Panel/FI1B";
 import FI3Aapproval from "../Components/views/Forms/Panel/FI3Aapproval";
 import FI5A from "../Components/views/Forms/Panel/FI5A";
 
+=======
+import DashboardPage from "../components/views/Dashboard/SupervisorDashboard";
+import UserProfile from "../components/views/UserProfile/SupervisorProfile.js";
+import TableList from "../components/views/TableList/SupervisorTableList.js";
+import DescriptionIcon from "@mui/icons-material/Description";
+import SupervisorForms from "../components/views/FormPanel/SupervisorForms";
+import FI3Aapproval from "../components/views/Forms/Panel/FI3Aapproval";
+import FI5A from "../components/views/Forms/Panel/FI5A";
+import FI1B from "../components/views/Forms/Panel/FI1B";
+>>>>>>> main:InternshipManagementSystem/Client/src/routes/SupervisorRoutes.js
 //import Typography from "./components/views/Typography/Typography.js";
 //import Icons from "./components/views/Icons/Icons.js";
 //import Maps from "./components/views/Maps/Maps.js";
@@ -68,6 +79,7 @@ const dashboardRoutes = [
     layout: "/supervisor",
   },
 
+<<<<<<< HEAD:Intern Management System/Client/src/Routes/SupervisorRoutes.js
   {
     path: "/FI1B",
     name: "Form I-1B",
@@ -93,14 +105,41 @@ const dashboardRoutes = [
   },
 
 /*
+=======
+>>>>>>> main:InternshipManagementSystem/Client/src/routes/SupervisorRoutes.js
   {
-    path: "/typography",
-    name: "Typography",
-    icon: LibraryBooks,
-    component: Typography,
+    path: "/FI1B",
+    name: "Form I-1B",
+    icon: DescriptionIcon,
+    component: FI1B,
     layout: "/supervisor",
   },
-*/
+
+  {
+    path: "/FI1BOnline",
+    name: "Form I-3A Approval",
+    icon: DescriptionIcon,
+    component: FI3Aapproval,
+    layout: "/supervisor",
+  },
+
+  {
+    path: "/FI5A",
+    name: "Form I-5A",
+    icon: DescriptionIcon,
+    component: FI5A,
+    layout: "/supervisor",
+  },
+
+  /*
+    {
+      path: "/typography",
+      name: "Typography",
+      icon: LibraryBooks,
+      component: Typography,
+      layout: "/supervisor",
+    },
+  */
 /*
   {
     path: "/icons",

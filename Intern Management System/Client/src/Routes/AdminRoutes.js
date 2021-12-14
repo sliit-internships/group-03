@@ -32,12 +32,20 @@ import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
 //import Language from "@material-ui/icons/Language";
 
 // core components/views for Admin layout
+<<<<<<< HEAD:Intern Management System/Client/src/Routes/AdminRoutes.js
 import DashboardPage from "../Components/views/Dashboard/AdminDashboard";
 import UserProfile from "../Components/views/UserProfile/AdminProfile";
 import CompanyTable from "../Components/views/TableList/AdminTables/CompanyTable";
 import StudentTable from "../Components/views/TableList/AdminTables/StudentTableList";
 import EvaluatorTableList from "../Components/views/TableList/AdminTables/EvaluatorTableList";
 import SupervisorTableList from "../Components/views/TableList/AdminTables/SupervisorTableList";
+=======
+import DashboardPage from "../components/views/Dashboard/AdminDashboard";
+import UserProfile from "../components/views/UserProfile/AdminProfile.js";
+import TableList from "../components/views/TableList/AdminTableList.js";
+import DescriptionIcon from "@mui/icons-material/Description";
+import FormPanel from "../components/views/FormPanel/FormPanel";
+>>>>>>> main:InternshipManagementSystem/Client/src/routes/AdminRoutes.js
 //import Typography from "./components/views/Typography/Typography.js";
 //import Icons from "./components/views/Icons/Icons.js";
 //import Maps from "./components/views/Maps/Maps.js";
@@ -92,6 +100,14 @@ const dashboardRoutes = [
     component: SupervisorTableList,
     layout: "/admin",
   },
+
+  /*{
+    path: "/forms_admin",
+    name: "Forms",
+    icon: DescriptionIcon,
+    component: FormPanel,
+    layout: "/admin",
+  },*/
 
 /*
   {
