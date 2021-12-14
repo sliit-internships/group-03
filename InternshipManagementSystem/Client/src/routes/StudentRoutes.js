@@ -19,7 +19,7 @@
 // @material-ui/icons
 import Dashboard from "@material-ui/icons/Dashboard";
 import Person from "@material-ui/icons/Person";
-import ContentPasteIcon from '@mui/icons-material/ContentPaste';
+//import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 //import LibraryBooks from "@material-ui/icons/LibraryBooks";
 //import BubbleChart from "@material-ui/icons/BubbleChart";
 //import LocationOn from "@material-ui/icons/LocationOn";
@@ -30,7 +30,7 @@ import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 // core components/views for Student layout
 import DashboardPage from "../Components/views/Dashboard/StudentDashboard";
 import UserProfile from "../Components/views/UserProfile/StudentProfile";
-import TableList from "../Components/views/TableList/StudentTableList";
+//import TableList from "../Components/views/TableList/StudentTableList";
 
 //import Typography from "./components/views/Typography/Typography.js";
 //import Icons from "./components/views/Icons/Icons.js";
@@ -55,7 +55,7 @@ const dashboardRoutes = [
     component: UserProfile,
     layout: "/student",
   },
-
+/*
   {
     path: "/table",
     name: "Table List",
@@ -63,7 +63,7 @@ const dashboardRoutes = [
     component: TableList,
     layout: "/student",
   },
-
+*/
 /*
   {
     path: "/typography",

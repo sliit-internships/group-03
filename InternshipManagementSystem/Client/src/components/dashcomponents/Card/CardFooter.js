@@ -9,7 +9,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 // core components
 //import styles from "assets/jss/material-dashboard-react/components/cardFooterStyle.js";
-import styles from "../../../assets/jss/material-dashboard-react/components/cardFooterStyle";
+import styles from "../../../Assets/jss/material-dashboard-react/components/cardFooterStyle";
 
 const useStyles = makeStyles(styles);
 

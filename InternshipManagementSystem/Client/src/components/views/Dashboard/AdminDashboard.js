@@ -3,13 +3,16 @@ import React from "react";
 //import ChartistGraph from "react-chartist";
 // @material-ui/core
 import { makeStyles } from "@material-ui/core/styles";
-//import Icon from "@material-ui/core/Icon";
 // @material-ui/icons
-//import Store from "@material-ui/icons/Store";
-//import Warning from "@material-ui/icons/Warning";
-//import DateRange from "@material-ui/icons/DateRange";
-//import LocalOffer from "@material-ui/icons/LocalOffer";
-//import Update from "@material-ui/icons/Update";
+import PendingActionsIcon from '@mui/icons-material/PendingActions';
+import ApprovalIcon from '@mui/icons-material/Approval';
+import DeleteIcon from '@mui/icons-material/Delete';
+import CachedIcon from '@mui/icons-material/Cached';
+
+import Warning from "@material-ui/icons/Warning";
+import DateRange from "@material-ui/icons/DateRange";
+import LocalOffer from "@material-ui/icons/LocalOffer";
+import Update from "@material-ui/icons/Update";
 //import ArrowUpward from "@material-ui/icons/ArrowUpward";
 //import AccessTime from "@material-ui/icons/AccessTime";
 //import Accessibility from "@material-ui/icons/Accessibility";
@@ -17,17 +20,17 @@ import { makeStyles } from "@material-ui/core/styles";
 //import Code from "@material-ui/icons/Code";
 //import Cloud from "@material-ui/icons/Cloud";
 // core components
-//import GridItem from "../../dashcomponents/Grid/GridItem.js";
+import GridItem from "../../dashcomponents/Grid/GridItem.js";
 import GridContainer from "../../dashcomponents/Grid/GridContainer.js";
 //import Table from "../../dashcomponents/Table/Table.js";
 //import Tasks from "../../dashcomponents/Tasks/Tasks.js";
 //import CustomTabs from "../../dashcomponents/CustomTabs/CustomTabs.js";
-//import Danger from "../../dashcomponents/Typography/Danger.js";
-//import Card from "../../dashcomponents/Card/Card";
-//import CardHeader from "../../dashcomponents/Card/CardHeader.js";
-//mport CardIcon from "../../dashcomponents/Card/CardIcon.js";
+import Danger from "../../dashcomponents/Typography/Danger.js";
+import Card from "../../dashcomponents/Card/Card";
+import CardHeader from "../../dashcomponents/Card/CardHeader.js";
+import CardIcon from "../../dashcomponents/Card/CardIcon.js";
 //import CardBody from "../../dashcomponents/Card/CardBody.js";
-//import CardFooter from "../../dashcomponents/Card/CardFooter.js";
+import CardFooter from "../../dashcomponents/Card/CardFooter.js";
 
 //import { bugs, website, server } from "../../variables/general.js";
 
@@ -46,7 +49,80 @@ export default function Dashboard() {
   return (
     <div>
       <GridContainer>
-      <h3 className={classes.cardTitle}>H</h3>
+      <GridItem xs={12} sm={6} md={3}>
+          <Card>
+            <CardHeader color="warning" stats icon>
+              <CardIcon color="warning">
+              <PendingActionsIcon />
+              </CardIcon>
+              <h3 className={classes.cardTitle}>
+              Pending internships
+              </h3>
+            </CardHeader>
+            <CardFooter stats>
+              <div className={classes.stats}>
+                <Danger>
+                  <Warning />
+                </Danger>
+                <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                  Get more space
+                </a>
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+        <GridItem xs={12} sm={6} md={3}>
+          <Card>
+            <CardHeader color="success" stats icon>
+              <CardIcon color="success">
+                <ApprovalIcon />
+              </CardIcon>
+              <h3 className={classes.cardTitle}>
+                Approved Internships
+              </h3>
+            </CardHeader>
+            <CardFooter stats>
+              <div className={classes.stats}>
+                <DateRange />
+                Last 24 Hours
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+        <GridItem xs={12} sm={6} md={3}>
+          <Card>
+            <CardHeader color="danger" stats icon>
+              <CardIcon color="danger">
+              <DeleteIcon />
+              </CardIcon>
+              <h3 className={classes.cardTitle}>
+                Denied internships
+              </h3>
+            </CardHeader>
+            <CardFooter stats>
+              <div className={classes.stats}>
+                <LocalOffer />
+                Tracked from Github
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+        <GridItem xs={12} sm={6} md={3}>
+          <Card>
+            <CardHeader color="info" stats icon>
+              <CardIcon color="info">
+                <CachedIcon />
+              </CardIcon>
+              <h3 className={classes.cardTitle}>Ongoing internships</h3>
+            </CardHeader>
+            <CardFooter stats>
+              <div className={classes.stats}>
+                <Update />
+                Just Updated
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
       </GridContainer>
     </div>
   );

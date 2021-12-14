@@ -20,7 +20,10 @@
 // @material-ui/icons
 import Dashboard from "@material-ui/icons/Dashboard";
 import Person from "@material-ui/icons/Person";
-import ContentPasteIcon from '@mui/icons-material/ContentPaste';
+import BusinessIcon from '@mui/icons-material/Business';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
+import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
 //import LibraryBooks from "@material-ui/icons/LibraryBooks";
 //import BubbleChart from "@material-ui/icons/BubbleChart";
 //import LocationOn from "@material-ui/icons/LocationOn";
@@ -31,7 +34,10 @@ import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 // core components/views for Admin layout
 import DashboardPage from "../Components/views/Dashboard/AdminDashboard";
 import UserProfile from "../Components/views/UserProfile/AdminProfile";
-import TableList from "../Components/views/TableList/AdminTableList";
+import CompanyTable from "../Components/views/TableList/AdminTables/CompanyTable";
+import StudentTable from "../Components/views/TableList/AdminTables/StudentTableList";
+import EvaluatorTableList from "../Components/views/TableList/AdminTables/EvaluatorTableList";
+import SupervisorTableList from "../Components/views/TableList/AdminTables/SupervisorTableList";
 //import Typography from "./components/views/Typography/Typography.js";
 //import Icons from "./components/views/Icons/Icons.js";
 //import Maps from "./components/views/Maps/Maps.js";
@@ -49,17 +55,41 @@ const dashboardRoutes = [
 
   {
     path: "/user",
-    name: "User Profile",
+    name: "Admin Profile",
     icon: Person,
     component: UserProfile,
     layout: "/admin",
   },
 
   {
-    path: "/table",
-    name: "Table List",
-    icon: ContentPasteIcon,
-    component: TableList,
+    path: "/companies",
+    name: "Companies",
+    icon: BusinessIcon,
+    component: CompanyTable,
+    layout: "/admin",
+  },
+
+  {
+    path: "/students",
+    name: "Students",
+    icon: AccountCircleIcon,
+    component: StudentTable,
+    layout: "/admin",
+  },
+
+  {
+    path: "/evaluator",
+    name: "Evaluator",
+    icon: PeopleOutlineIcon,
+    component: EvaluatorTableList,
+    layout: "/admin",
+  },
+
+  {
+    path: "/supervisor",
+    name: "Supervisor",
+    icon: SupervisorAccountIcon,
+    component: SupervisorTableList,
     layout: "/admin",
   },
 
@@ -81,15 +111,7 @@ const dashboardRoutes = [
     layout: "/admin",
   },
 */
-/*
-  {
-    path: "/maps",
-    name: "Maps",
-    icon: LocationOn,
-    component: Maps,
-    layout: "/admin",
-  },
-*/
+
 /*
   {
     path: "/notifications",
