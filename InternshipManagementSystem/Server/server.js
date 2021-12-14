@@ -1,29 +1,21 @@
-require('dotenv').config({path: "./config.env"});
-const express = require("express");
+const express = require('express');
+const app = express();
+const cookieParser = require('cookie-parser');
+const mongoose = require('mongoose');
+app.use(cookieParser());
+app.use(express.json());
 const connectDB = require('./config/db');
-const errorHandler = require('./middleware/error');
+require('dotenv').config({path: "./config.env"});
 
-//Connect DB
+const Port = process.env.PORT;
+
 connectDB();
 
-const app = express();
+const userRouter = require('./routes/User');
+app.use('/user',userRouter);
 
-//middleware
-app.use(express.json());
+app.listen(Port, () => {
 
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/private', require('./routes/private'));
+    console.log('App is running on port', Port)
 
-//Error Handler
-app.use(errorHandler);
-
-const PORT = process.env.PORT || 8181;
-
-const server = app.listen(PORT, () => 
-  console.log(`Server is running on ${PORT}`)
-);
-
-process.on("unhandledRejection", (err, promise) =>{
-  console.log(`Logged Error: ${err.message}`);
-  server.close(() => process.exit(1));
-})
+});
